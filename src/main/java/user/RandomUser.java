@@ -4,7 +4,7 @@ import com.github.javafaker.Faker;
 import io.qameta.allure.Step;
 
 public class RandomUser {
-    public static User UserRandom(){
+    public static User userRandom(){
         Faker faker = new Faker();
         final String email = faker.internet().emailAddress();
         final String password = faker.internet().password(6,12);

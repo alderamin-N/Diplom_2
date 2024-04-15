@@ -1,9 +1,17 @@
 package order;
 
+import api.OrderAPI;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.SimpleTimeZone;
+
 public class OrderList {
 
     public static Order withIngredients() {
-        final String[] ingredients = {"61c0c5a71d1f82001bdaaa75", "61c0c5a71d1f82001bdaaa6d"};
+        List<String> list = OrderAPI.сreateListIngredients();
+        String[] ingredients = list.toArray(new String[0]);
         return new Order(ingredients);
     }
 
